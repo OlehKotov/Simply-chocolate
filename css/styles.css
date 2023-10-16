@@ -1,77 +1,77 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #111;
+  background-color: #FAFAFA;
 }
-.list {
-    list-style: none;
+ul {
+  list-style-type: none;
+}
+.container {
+  width: 375px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
-.header {
-}
-.header-navigation {
-}
-.header-logo {
-    color: #111;
-font-size: 18px;
-font-weight: 700;
-line-height: 1.11;
-letter-spacing: -0.03em;
-}
-.header-logo-italic {
-    font-style: italic;
-}
-.header-menu {
-}
-.header-menu-item {
-}
-.header-menu-link {
-    color: #111;
-
-font-size: 14px;
-
-font-weight: 500;
-line-height: 1.14;
-letter-spacing: -0.02em;
-}
-.header-social {
-}
-.header-social-item {
-}
-.header-social-link {
+.section-subtitle {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
 }
 .hero {
+  background: rgba(17, 17, 17, 0.40);
+}
+.logo {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+}
+.logo span {
+  font-style: italic;
 }
 .hero-title {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
 }
-.hero-buy-button {
+.hero-button {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
 }
-.hero-anchor-button {
+.hero-link-made {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
 }
-.hero-scroll-button {
+.hero-link-scroll {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17; 
+  letter-spacing: -0.03em;
 }
 .features {
+  background-color: #111111;
 }
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-.features-list {
-}
-.features-item {
-}
-.features-subtitle {
-}
-.features-item-text {
-}
-.button {
+.features-text {
+  color: rgba(255, 255, 255, 0.70);
+font-size: 14px;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.02;
 }
