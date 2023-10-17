@@ -8,12 +8,19 @@ body {
 }
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1, h2, h3, p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .hidden {
   display: none;
 }
 .container {
-  width: 375px;
+  max-width: 375px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -46,17 +53,24 @@ ul {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
-.hero {
-  background: rgba(17, 17, 17, 0.4);
-}
 .logo {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.28;
   letter-spacing: -0.03em;
+  color: #111;
+  padding-top: 25px;
+  padding-bottom: 19px;
 }
 .logo span {
   font-style: italic;
+}
+.logo-img {
+  margin-left: 4px;
+}
+.menu-open-btn {
+  border: none;
+  background-color: #FAFAFA;
 }
 .hero-title {
   color: #fff;
@@ -65,6 +79,7 @@ ul {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  margin-bottom: 32px;
 }
 .hero-button {
   color: #fff;
@@ -100,4 +115,105 @@ ul {
 .made-item {
 line-height: 1.28;
 letter-spacing: -0.02em;
+}
+.products-subtitle {
+  color: #111;
+line-height: 1.33;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+}
+.products-text {
+  color: rgba(17, 17, 17, 0.70);
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: -0.02em;
+}
+.products-button {
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.sellers-subtitle {
+font-size: 18px;
+font-weight: 600;
+line-height: 1.33; 
+letter-spacing: -0.02em;
+text-transform: uppercase;
+}
+.loved-subtitle {
+  color: #111;
+text-align: center;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 1.33;
+}
+.loved-text {
+  color: rgba(17, 17, 17, 0.70);
+text-align: center;
+line-height: 1.28;
+letter-spacing: -0.02em;
+}
+.loved-button {
+text-align: center;
+font-weight: 600;
+line-height: normal;
+}
+.footer {
+  background-color: #1E1823;
+}
+.footer-title {
+  color: #FFF;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.17;
+letter-spacing: -0.02em;
+}
+.footer-title span {
+  color: #FD9222;
+}
+.footer-subtitle {
+  color: #FFF;
+font-weight: 500;
+line-height: 1.28;
+font-style: normal;
+}
+.contacts-link {
+  color: #FFF;
+font-style: normal;
+line-height: 1.28;
+letter-spacing: -0.02em;
+}
+.footer-menu-item {
+  color: #FFF;
+font-weight: 500;
+line-height: 1.14; 
+letter-spacing: -0.02em;
+}
+.logo-svg {
+  stroke: #FD9222;
+}
+.menu-open-btn-icon {
+  stroke: #111;
+}
+.menu-svg {
+  width: 28px;
+  height: 28px;
+}
+.header .container {
+  display: flex;
+  gap: 138px;
+}
+.hero-container {
+  background-color: rgba(17, 17, 17, 0.40);
+  background-image: url(../images/chocolate_main.jpg);
+  padding: 395px 16px 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  margin-bottom: 80px;
+
 }
