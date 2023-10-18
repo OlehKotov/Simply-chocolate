@@ -22,6 +22,7 @@ p {
 button {
   padding: 0;
   margin: 0;
+  
 }
 img {
   display: block;
@@ -130,6 +131,10 @@ img {
   font-size: 14px;
   font-weight: 600;
   line-height: normal;
+  padding: 12px 28px;
+  border-radius: 100px;
+background-color: #FD9222;
+border: none;
 }
 .hero-link-made {
   color: #fff;
@@ -142,6 +147,23 @@ img {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: -0.03em;
+}
+.hero-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 14px;
+}
+.hero-link-made {
+  background-color: transparent;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: 1px solid #FFF;
+}
+.hero-link-scroll {
+font-size: 12px;
+font-weight: 500;
+line-height: 1.17; /* 116.667% */
+letter-spacing: -0.03em;
 }
 /* ================FEATURES================= */
 .features .container {
@@ -330,6 +352,7 @@ img {
   height: 364px;
   padding: 32px 52px 32px 53px;
 }
+
 .products-item-img {
   margin-bottom: 8px;
 }
@@ -345,6 +368,12 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.products-button {
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  background: #FAFAFA;
+}
 /* ================SELLERS================= */
 .sellers-subtitle {
   font-size: 18px;
@@ -352,7 +381,52 @@ img {
   line-height: 1.33;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  width: 223px;
 }
+.sellers .container {
+  padding-top: 80px;
+}
+.sellers-title {
+  margin-bottom: 32px;
+}
+.sellers-item-img {
+  border-radius: 15px 15px 0px 0px;
+}
+.sellers-sub-wrapper {
+  border-radius: 0px 0px 15px 15px;
+border-right: 1px solid rgba(17, 17, 17, 0.10);
+border-bottom: 1px solid rgba(17, 17, 17, 0.10);
+border-left: 1px solid rgba(17, 17, 17, 0.10);
+background: #FFF;
+padding: 24px 56px;
+}
+.sellers-wrap-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.sellers-wrap-text-container {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(165deg, rgba(253, 253, 255, 0.10) 3.97%, rgba(8, 2, 21, 0.00) 109.76%); 
+backdrop-filter: blur(7.5px);
+transform: translateY(100%);
+transition: transform 250ms linear;
+
+}
+.sellers-text-overlay {
+  color: #FFF;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+.sellers-item:hover .sellers-wrap-text-container {
+  transform: translateY(0);
+} 
 /* ================LOVED================= */
 .loved-subtitle {
   color: #111;
