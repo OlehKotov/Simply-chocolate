@@ -22,7 +22,6 @@ p {
 button {
   padding: 0;
   margin: 0;
-  
 }
 img {
   display: block;
@@ -97,6 +96,7 @@ img {
   border: none;
   width: 28px;
   height: 28px;
+  cursor: pointer;
 }
 .menu-open-btn-icon {
   stroke: #111;
@@ -133,13 +133,28 @@ img {
   line-height: normal;
   padding: 12px 28px;
   border-radius: 100px;
-background-color: #FD9222;
-border: none;
+  background-color: #fd9222;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms linear, color 250ms linear;
 }
+.hero-button:hover {
+  background-color: #FCF1E0;
+  color: #FD9222;
+} 
 .hero-link-made {
   color: #fff;
   font-weight: 600;
   line-height: normal;
+  background-color: transparent;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  transition: border-color 250ms linear, color 250ms linear;
+}
+.hero-link-made:hover {
+  color: #FD9222;
+  border-color: #FD9222;
 }
 .hero-link-scroll {
   color: #fff;
@@ -147,24 +162,39 @@ border: none;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: -0.03em;
+  width: 107px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 250ms linear;
+}
+.hero-link-scroll::after {
+  content: '';
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  background-image: url(../images/fi-rr-angle-small-left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  border-radius: 50%;
+  transition: background-color 250ms linear, background-image 250ms linear;
+} 
+.hero-link-scroll:hover {
+  color: #FD9222;
+} 
+.hero-link-scroll:hover::after {
+  background-color: #FD9222;
+  background-image: url(../images/fi-rr-white.svg);
+
 }
 .hero-buttons-container {
   display: flex;
   flex-wrap: wrap;
   gap: 32px 14px;
 }
-.hero-link-made {
-  background-color: transparent;
-  padding: 12px 28px;
-  border-radius: 100px;
-  border: 1px solid #FFF;
-}
-.hero-link-scroll {
-font-size: 12px;
-font-weight: 500;
-line-height: 1.17; /* 116.667% */
-letter-spacing: -0.03em;
-}
+
 /* ================FEATURES================= */
 .features .container {
   padding: 20px;
@@ -255,6 +285,7 @@ letter-spacing: -0.03em;
   position: absolute;
   top: 14px;
   right: 14px;
+  cursor: pointer;
 }
 .taste-item:nth-child(2n) .taste-item-icon {
   stroke: #fd9222;
@@ -315,6 +346,7 @@ letter-spacing: -0.03em;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  cursor: pointer;
 }
 /* ================PRODUCTS================= */
 .products-subtitle {
@@ -334,6 +366,7 @@ letter-spacing: -0.03em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
 }
 .products-title {
   margin-bottom: 32px;
@@ -358,7 +391,6 @@ letter-spacing: -0.03em;
 }
 .products-subtitle {
   margin-bottom: 2px;
-  
 }
 .products-text {
   margin-bottom: 18px;
@@ -371,8 +403,8 @@ letter-spacing: -0.03em;
 .products-button {
   padding: 8px 20px;
   border-radius: 100px;
-  border: 1px solid rgba(17, 17, 17, 0.10);
-  background: #FAFAFA;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fafafa;
 }
 /* ================SELLERS================= */
 .sellers-subtitle {
@@ -394,15 +426,16 @@ letter-spacing: -0.03em;
 }
 .sellers-sub-wrapper {
   border-radius: 0px 0px 15px 15px;
-border-right: 1px solid rgba(17, 17, 17, 0.10);
-border-bottom: 1px solid rgba(17, 17, 17, 0.10);
-border-left: 1px solid rgba(17, 17, 17, 0.10);
-background: #FFF;
-padding: 24px 56px;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fff;
+  padding: 24px 56px;
 }
 .sellers-wrap-overlay {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .sellers-wrap-text-container {
   position: absolute;
@@ -413,20 +446,23 @@ padding: 24px 56px;
   padding: 20px;
   height: 100%;
   border-radius: 15px 15px 0px 0px;
-  background: linear-gradient(165deg, rgba(253, 253, 255, 0.10) 3.97%, rgba(8, 2, 21, 0.00) 109.76%); 
-backdrop-filter: blur(7.5px);
-transform: translateY(100%);
-transition: transform 250ms linear;
-
+  background: linear-gradient(
+    165deg,
+    rgba(253, 253, 255, 0.1) 3.97%,
+    rgba(8, 2, 21, 0) 109.76%
+  );
+  backdrop-filter: blur(7.5px);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
 }
 .sellers-text-overlay {
-  color: #FFF;
+  color: #fff;
   line-height: 1.28;
   letter-spacing: -0.02em;
 }
 .sellers-item:hover .sellers-wrap-text-container {
   transform: translateY(0);
-} 
+}
 /* ================LOVED================= */
 .loved-subtitle {
   color: #111;
@@ -435,6 +471,10 @@ transition: transform 250ms linear;
   font-style: normal;
   font-weight: 600;
   line-height: 1.33;
+  padding-bottom: 24px;
+}
+.loved-title {
+  padding-bottom: 74px;
 }
 .loved-text {
   color: rgba(17, 17, 17, 0.7);
@@ -447,6 +487,43 @@ transition: transform 250ms linear;
   font-weight: 600;
   line-height: normal;
 }
+.loved .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.loved-item {
+  padding: 56px 18px 42px;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: #fff;
+  box-shadow: 0px 9.04932px 100px 0px rgba(17, 17, 17, 0.03);
+  position: relative;
+  margin-bottom: 32px;
+}
+.loved-img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.loved-button {
+  color: #111;
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: 1px solid #fd9222;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 165px;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.loved-button:hover {
+  background-color: #FD9222;
+  color: #FFF;
+}
 /* ================FOOTER================= */
 .footer {
   background-color: #1e1823;
@@ -458,6 +535,7 @@ transition: transform 250ms linear;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: -0.02em;
+  width: 300px;
 }
 .footer-title span {
   color: #fd9222;
@@ -467,6 +545,7 @@ transition: transform 250ms linear;
   font-weight: 500;
   line-height: 1.28;
   font-style: normal;
+  margin-bottom: 14px;
 }
 .contacts-link {
   color: #fff;
@@ -474,9 +553,109 @@ transition: transform 250ms linear;
   line-height: 1.28;
   letter-spacing: -0.02em;
 }
-.footer-menu-item {
+.footer-menu-link {
   color: #fff;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
 }
+.footer-wrap-top {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.socials-list {
+  display: flex;
+  gap: 14px;
+}
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+.socials-item:hover .socials-item-link {
+  border: 1px solid rgba(253, 146, 34, 0.1);
+}
+
+.socials-item-icon {
+  fill: #fff;
+  transition: fill 250ms linear;
+}
+.socials-item:hover .socials-item-icon {
+  fill: #fd9222;
+}
+.socials-item-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 250ms linear;
+}
+.footer-menu {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer-input {
+  background-color: transparent;
+  width: 207px;
+  height: 45px;
+  outline: transparent;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  padding-left: 18px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02em;
+}
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.02em;
+}
+.footer-form {
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-button {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 14px 24px;
+  background-color: #fd9222;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.footer-button:hover {
+  background-color: #FCF1E0;
+  color: #FD9222;
+} 
